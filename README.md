@@ -103,4 +103,5 @@ See [spec/FQL_Dependent_Types_Complete_Specification.md](spec/FQL_Dependent_Type
 ## See Also
 
 - [FormDB](https://github.com/hyperpolymath/formdb) - The narrative-first database
+- [FormDB Studio](https://github.com/hyperpolymath/formdb-studio) - Zero-friction GUI for FQLdt
 - [BoFIG](https://github.com/hyperpolymath/bofig) - Binary-Origami Figuration (journalism use case)
