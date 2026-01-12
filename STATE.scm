@@ -197,6 +197,17 @@
       (action "Complete Milestone 5 (Zig FFI)")
       (action "Begin Milestone 6 (FQL Parser)")))
 
+  (unified-roadmap
+    (reference "UNIFIED-ROADMAP.scm")
+    (role "Dependently-typed query language - critical path item")
+    (mvp-blockers
+      "M5: Zig FFI Bridge (blocks Studio M3, real type checking)"
+      "M6: FQL Parser (blocks full FQLdt compilation)")
+    (this-repo-priority
+      "Complete M5 Zig FFI - highest priority"
+      "Integrate with FormDB's EBNF grammar"
+      "Proof blob serialization (CBOR RFC 8949)"))
+
   (session-history
     (snapshot
       (date "2025-01-12")

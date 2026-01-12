@@ -22,7 +22,28 @@ lean_lib FqlDt where
   srcDir := "src"
   roots := #[`FqlDt]
 
--- Executable for CLI (future)
--- lean_exe fqldt where
---   root := `Main
---   supportInterpreter := true
+-- FFI Test executable (requires Zig library to be built first)
+-- Build Zig lib: cd bridge && zig build
+lean_exe ffi_test where
+  srcDir := "test"
+  root := `FFITest
+  -- Link against the Zig FFI bridge library
+  moreLinkArgs := #[
+    "-Lbridge/zig-out/lib",
+    "-lfdb_bridge"
+  ]
+
+-- Parser test executable
+lean_exe parser_test where
+  srcDir := "test"
+  root := `ParserTest
+
+-- FQLdt CLI/REPL (with FFI persistence backend)
+lean_exe fqldt where
+  srcDir := "src"
+  root := `Main
+  -- Link against the Zig FFI bridge library for persistence
+  moreLinkArgs := #[
+    "-Lbridge/zig-out/lib",
+    "-lfdb_bridge"
+  ]

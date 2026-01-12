@@ -24,3 +24,10 @@ import FqlDt.Prompt.PromptScores
 import FqlDt.Provenance.ActorId
 import FqlDt.Provenance.Rationale
 import FqlDt.Provenance.Tracked
+
+-- FFI Bridge (Zig bindings)
+-- Note: Requires libfdb_bridge.a to be linked for runtime use
+import FqlDt.FFI.Bridge
+
+-- FQL Query Language
+import FqlDt.Query
